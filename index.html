@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Royal Edge Business</title>
+  <title>Dragonsteel Guild</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">Royal Edge</div>
+    <div class="logo">Dragonsteel Guild</div>
     <nav class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -20,19 +20,19 @@
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <span class="eyebrow">Elite business solutions</span>
-        <h1>Build a stronger brand with modern strategy and design.</h1>
-        <p>We deliver premium digital services for ambitious businesses that demand clarity, speed, and precision.</p>
+        <span class="eyebrow">Dungeon & Dragons business</span>
+        <h1>Legendary campaigns, epic events, and branded adventures.</h1>
+        <p>Dragonsteel Guild crafts immersive tabletop experiences, premium events, and storytelling for brands that want to stand out with a fantasy edge.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Start a Project</a>
-          <a class="btn btn-secondary" href="#services">Explore Services</a>
+          <a class="btn btn-primary" href="#contact">Book Your Quest</a>
+          <a class="btn btn-secondary" href="#services">See Services</a>
         </div>
       </div>
       <div class="hero-panel">
         <div class="panel-card">
-          <img src="royal%20edge.jfif" alt="Royal Edge" class="panel-image" />
-          <h2>Digital Transformation</h2>
-          <p>Branding, web presence, and growth systems designed to elevate your business.</p>
+          <img src="royal%20edge.jfif" alt="Dragonsteel Guild" class="panel-image" />
+          <h2>Forge unforgettable stories</h2>
+          <p>From campaign design to live events, we build premium experiences that feel both epic and polished.</p>
         </div>
       </div>
     </section>
@@ -40,17 +40,17 @@
     <section id="about" class="section section-dark">
       <div class="container grid-two">
         <div>
-          <h2>About Royal Edge</h2>
-          <p>We specialize in modern digital experiences that combine strategy, design, and performance. Our team helps businesses discover new opportunities and execute with confidence.</p>
+          <h2>About Dragonsteel Guild</h2>
+          <p>We combine tabletop mastery with premium event and brand services. Our guild helps storytellers, companies, and communities bring fantastical adventures to life.</p>
           <ul class="feature-list">
-            <li>Strategic branding and visual identity</li>
-            <li>High-impact websites and landing pages</li>
-            <li>Conversion-focused digital marketing support</li>
+            <li>Custom campaign design and narrative consulting</li>
+            <li>Branded events, tournaments, and immersive experiences</li>
+            <li>Visual identity, themes, and digital storytelling</li>
           </ul>
         </div>
         <div class="feature-box">
-          <h3>Why choose us?</h3>
-          <p>Our approach is direct, polished, and built around measurable results. We partner with companies that want premium design without compromise.</p>
+          <h3>Why work with us?</h3>
+          <p>We deliver polished, high-impact fantasy experiences with a modern business sensibility. Every project is crafted to feel bold, memorable, and expertly executed.</p>
         </div>
       </div>
     </section>
@@ -58,22 +58,45 @@
     <section id="services" class="section section-light">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">Services</span>
-          <h2>What we offer</h2>
+          <span class="eyebrow">Guild services</span>
+          <h2>Campaigns, One-Shots & Maps</h2>
         </div>
+
         <div class="card-grid">
           <article class="service-card">
-            <h3>Brand Identity</h3>
-            <p>Logo systems, messaging, and visual direction that command attention and build trust.</p>
+            <h3>Maps</h3>
+            <p>Explore ready-made battle maps and upload your own custom map assets for every session.</p>
           </article>
           <article class="service-card">
-            <h3>Web Design</h3>
-            <p>Responsive, fast-loading websites with premium layouts and a contemporary edge.</p>
+            <h3>Campaigns</h3>
+            <p>Choose from full campaign storylines or commission your own branded adventure arc.</p>
           </article>
           <article class="service-card">
-            <h3>Growth Strategy</h3>
-            <p>Data-informed campaign planning and optimization to increase reach and client acquisition.</p>
+            <h3>One-Shots</h3>
+            <p>Quick, self-contained adventures designed for a single game night with minimal prep.</p>
           </article>
+        </div>
+
+        <div class="upload-row">
+          <div class="upload-card">
+            <h4>Upload Custom Campaign</h4>
+            <p class="hint">Upload campaign files (PDF, DOCX, ZIP). Client-side only — files are not sent to a server.</p>
+            <label class="file-input">
+              <input id="campaignUpload" type="file" accept=".pdf,.doc,.docx,.zip" />
+              <span>Select campaign file</span>
+            </label>
+            <ul id="campaignList" class="uploads-list"></ul>
+          </div>
+
+          <div class="upload-card">
+            <h4>Upload Your Maps</h4>
+            <p class="hint">Upload map images (PNG, JPG) or zipped map packs.</p>
+            <label class="file-input">
+              <input id="mapUpload" type="file" accept="image/*,.zip" multiple />
+              <span>Select map files</span>
+            </label>
+            <div id="mapGallery" class="map-gallery"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -81,17 +104,17 @@
     <section id="work" class="section section-dark">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">Featured work</span>
+          <span class="eyebrow">Featured quests</span>
           <h2>Recent projects</h2>
         </div>
         <div class="project-grid">
           <div class="project-card">
-            <h3>Luxury retail launch</h3>
-            <p>Built a compelling brand identity and digital storefront for a high-end product line.</p>
+            <h3>Dragonspire Tournament</h3>
+            <p>Designed a live tabletop event with premium branding, immersive quests, and competitive gameplay for a guild-wide launch.</p>
           </div>
           <div class="project-card">
-            <h3>Consulting refresh</h3>
-            <p>Modernized messaging and created a conversion-focused website for professional services.</p>
+            <h3>Warden's Market Campaign</h3>
+            <p>Built a fully branded fantasy campaign experience for a product launch, combining story, visuals, and player engagement.</p>
           </div>
         </div>
       </div>
@@ -100,17 +123,62 @@
     <section id="contact" class="section section-light contact-section">
       <div class="container grid-two align-center">
         <div>
-          <span class="eyebrow">Get in touch</span>
-          <h2>Ready to elevate your business?</h2>
-          <p>Send us a message and we’ll help you refine your next launch, redesign, or marketing push.</p>
+          <span class="eyebrow">Join the guild</span>
+          <h2>Ready to launch your next adventure?</h2>
+          <p>Reach out and we’ll help you create a fantasy experience that feels powerful, polished, and unforgettable.</p>
         </div>
-        <a class="btn btn-primary contact-btn" href="mailto:hello@royaledge.com">hello@royaledge.com</a>
+        <a class="btn btn-primary contact-btn" href="mailto:hello@dragonsteelguild.com">hello@dragonsteelguild.com</a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Royal Edge © 2026 · Modern business solutions</p>
+    <p>Dragonsteel Guild © 2026 · Crafted for epic businesses</p>
   </footer>
+  <script>
+    // Client-side preview for uploaded campaigns and maps (no backend)
+    const campaignInput = document.getElementById('campaignUpload');
+    const campaignList = document.getElementById('campaignList');
+    const mapInput = document.getElementById('mapUpload');
+    const mapGallery = document.getElementById('mapGallery');
+
+    if (campaignInput) campaignInput.addEventListener('change', (e) => {
+      campaignList.innerHTML = '';
+      Array.from(e.target.files).forEach(f => {
+        const li = document.createElement('li');
+        li.textContent = f.name + ' (' + Math.round(f.size/1024) + ' KB)';
+        campaignList.appendChild(li);
+      });
+    });
+
+    if (mapInput) mapInput.addEventListener('change', (e) => {
+      mapGallery.innerHTML = '';
+      Array.from(e.target.files).forEach(f => {
+        const ext = f.name.split('.').pop().toLowerCase();
+        if (['png','jpg','jpeg','webp','gif'].includes(ext)) {
+          const img = document.createElement('img');
+          img.src = URL.createObjectURL(f);
+          img.alt = f.name;
+          img.style.width = '100%';
+          img.style.borderRadius = '8px';
+          const wrap = document.createElement('div');
+          wrap.className = 'map-card';
+          const caption = document.createElement('div');
+          caption.textContent = f.name;
+          caption.style.fontSize = '0.85rem';
+          caption.style.color = 'var(--muted)';
+          caption.style.marginTop = '0.5rem';
+          wrap.appendChild(img);
+          wrap.appendChild(caption);
+          mapGallery.appendChild(wrap);
+        } else {
+          const wrap = document.createElement('div');
+          wrap.className = 'map-card';
+          wrap.textContent = f.name + ' (' + Math.round(f.size/1024) + ' KB)';
+          mapGallery.appendChild(wrap);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
