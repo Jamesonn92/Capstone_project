@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dragonsteel Guild — Campaigns</title>
+  <title>Dragonsteel Guild - Campaigns & One-Shots</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,7 +12,7 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="maps.html">Maps</a>
-      <a href="one-shots.html">One-Shots</a>
+      <a href="campaigns.html">Campaigns & One-Shots</a>
       <a href="vtt.html">VTT</a>
       <a href="dming.html">DMing</a>
     </nav>
@@ -21,15 +21,39 @@
     <section class="section section-light">
       <div class="container">
         <div class="section-header">
-          <span class="eyebrow">Campaigns</span>
-          <h2>Build a story arc that keeps players coming back</h2>
+          <span class="eyebrow">Campaigns & One-Shots</span>
+          <h2>Build story arcs and one-night adventures that keep players coming back</h2>
         </div>
-        <p>Partner with Dragonsteel Guild for custom campaign design, player arc development, and branded narrative strategy.</p>
+        <p>Partner with Dragonsteel Guild for custom campaign design, ready-to-run one-shots, player arc development, and branded narrative strategy.</p>
+        <div class="upload-row single-upload">
+          <div class="upload-card">
+            <h4>Upload Custom Campaign or One-Shot</h4>
+            <p class="hint">Upload adventure files (PDF, DOCX, ZIP). Client-side only - files are not sent to a server.</p>
+            <label class="file-input">
+              <input id="campaignUpload" type="file" accept=".pdf,.doc,.docx,.zip" />
+              <span>Select adventure file</span>
+            </label>
+            <ul id="campaignList" class="uploads-list"></ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <p>Dragonsteel Guild © 2026 · Crafted for epic businesses</p>
   </footer>
+  <script>
+    const campaignInput = document.getElementById('campaignUpload');
+    const campaignList = document.getElementById('campaignList');
+
+    if (campaignInput) campaignInput.addEventListener('change', (e) => {
+      campaignList.innerHTML = '';
+      Array.from(e.target.files).forEach(f => {
+        const li = document.createElement('li');
+        li.textContent = f.name + ' (' + Math.round(f.size / 1024) + ' KB)';
+        campaignList.appendChild(li);
+      });
+    });
+  </script>
 </body>
 </html>

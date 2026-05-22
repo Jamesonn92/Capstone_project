@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dragonsteel Guild</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <header class="site-header">
     <div class="logo">Dragonsteel Guild</div>
@@ -22,7 +24,8 @@
       <div class="hero-copy">
         <span class="eyebrow">Dungeon & Dragons business</span>
         <h1>Legendary campaigns, epic events, and branded adventures.</h1>
-        <p>Dragonsteel Guild crafts immersive tabletop experiences, premium events, and storytelling for brands that want to stand out with a fantasy edge.</p>
+        <p>Dragonsteel Guild crafts immersive tabletop experiences, premium events, and storytelling for brands that
+          want to stand out with a fantasy edge.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Book Your Quest</a>
           <a class="btn btn-secondary" href="#services">See Services</a>
@@ -41,7 +44,8 @@
       <div class="container grid-two">
         <div>
           <h2>About Dragonsteel Guild</h2>
-          <p>We combine tabletop mastery with premium event and brand services. Our guild helps storytellers, companies, and communities bring fantastical adventures to life.</p>
+          <p>We combine tabletop mastery with premium event and brand services. Our guild helps storytellers, companies,
+            and communities bring fantastical adventures to life.</p>
           <ul class="feature-list">
             <li>Custom campaign design and narrative consulting</li>
             <li>Branded events, tournaments, and immersive experiences</li>
@@ -50,7 +54,8 @@
         </div>
         <div class="feature-box">
           <h3>Why work with us?</h3>
-          <p>We deliver polished, high-impact fantasy experiences with a modern business sensibility. Every project is crafted to feel bold, memorable, and expertly executed.</p>
+          <p>We deliver polished, high-impact fantasy experiences with a modern business sensibility. Every project is
+            crafted to feel bold, memorable, and expertly executed.</p>
         </div>
       </div>
     </section>
@@ -68,12 +73,8 @@
             <p>Explore ready-made battle maps and upload your own custom map assets for every session.</p>
           </a>
           <a class="service-card" href="campaigns.html">
-            <h3>Campaigns</h3>
-            <p>Choose from full campaign storylines or commission your own branded adventure arc.</p>
-          </a>
-          <a class="service-card" href="one-shots.html">
-            <h3>One-Shots</h3>
-            <p>Quick, self-contained adventures designed for a single game night with minimal prep.</p>
+            <h3>Campaigns & One-Shots</h3>
+            <p>Choose full campaign storylines, quick one-night adventures, or commission your own branded arc.</p>
           </a>
           <a class="service-card" href="vtt.html">
             <h3>Virtual Tabletop (VTT)</h3>
@@ -83,32 +84,8 @@
             <h3>DMing</h3>
             <p>Master resources, NPC libraries, encounter builders, and DM-friendly reference guides.</p>
           </a>
-          <div class="service-image-space">
-            <img src="Fantasy-Heartbreaker-Dungeons-Dragons-DnD-Tavern.avif" alt="Service showcase" class="service-image" />
-          </div>
         </div>
 
-        <div class="upload-row">
-          <div class="upload-card">
-            <h4>Upload Custom Campaign</h4>
-            <p class="hint">Upload campaign files (PDF, DOCX, ZIP). Client-side only — files are not sent to a server.</p>
-            <label class="file-input">
-              <input id="campaignUpload" type="file" accept=".pdf,.doc,.docx,.zip" />
-              <span>Select campaign file</span>
-            </label>
-            <ul id="campaignList" class="uploads-list"></ul>
-          </div>
-
-          <div class="upload-card">
-            <h4>Upload Your Maps</h4>
-            <p class="hint">Upload map images (PNG, JPG) or zipped map packs.</p>
-            <label class="file-input">
-              <input id="mapUpload" type="file" accept="image/*,.zip" multiple />
-              <span>Select map files</span>
-            </label>
-            <div id="mapGallery" class="map-gallery"></div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -121,11 +98,13 @@
         <div class="project-grid">
           <div class="project-card">
             <h3>Dragonspire Tournament</h3>
-            <p>Designed a live tabletop event with premium branding, immersive quests, and competitive gameplay for a guild-wide launch.</p>
+            <p>Designed a live tabletop event with premium branding, immersive quests, and competitive gameplay for a
+              guild-wide launch.</p>
           </div>
           <div class="project-card">
             <h3>Warden's Market Campaign</h3>
-            <p>Built a fully branded fantasy campaign experience for a product launch, combining story, visuals, and player engagement.</p>
+            <p>Built a fully branded fantasy campaign experience for a product launch, combining story, visuals, and
+              player engagement.</p>
           </div>
         </div>
       </div>
@@ -136,7 +115,8 @@
         <div>
           <span class="eyebrow">Join the guild</span>
           <h2>Ready to launch your next adventure?</h2>
-          <p>Reach out and we’ll help you create a fantasy experience that feels powerful, polished, and unforgettable.</p>
+          <p>Reach out and we’ll help you create a fantasy experience that feels powerful, polished, and unforgettable.
+          </p>
         </div>
         <a class="btn btn-primary contact-btn" href="mailto:hello@dragonsteelguild.com">hello@dragonsteelguild.com</a>
       </div>
@@ -146,50 +126,6 @@
   <footer class="site-footer">
     <p>Dragonsteel Guild © 2026 · Crafted for epic businesses</p>
   </footer>
-  <script>
-    // Client-side preview for uploaded campaigns and maps (no backend)
-    const campaignInput = document.getElementById('campaignUpload');
-    const campaignList = document.getElementById('campaignList');
-    const mapInput = document.getElementById('mapUpload');
-    const mapGallery = document.getElementById('mapGallery');
-
-    if (campaignInput) campaignInput.addEventListener('change', (e) => {
-      campaignList.innerHTML = '';
-      Array.from(e.target.files).forEach(f => {
-        const li = document.createElement('li');
-        li.textContent = f.name + ' (' + Math.round(f.size/1024) + ' KB)';
-        campaignList.appendChild(li);
-      });
-    });
-
-    if (mapInput) mapInput.addEventListener('change', (e) => {
-      mapGallery.innerHTML = '';
-      Array.from(e.target.files).forEach(f => {
-        const ext = f.name.split('.').pop().toLowerCase();
-        if (['png','jpg','jpeg','webp','gif'].includes(ext)) {
-          const img = document.createElement('img');
-          img.src = URL.createObjectURL(f);
-          img.alt = f.name;
-          img.style.width = '100%';
-          img.style.borderRadius = '8px';
-          const wrap = document.createElement('div');
-          wrap.className = 'map-card';
-          const caption = document.createElement('div');
-          caption.textContent = f.name;
-          caption.style.fontSize = '0.85rem';
-          caption.style.color = 'var(--muted)';
-          caption.style.marginTop = '0.5rem';
-          wrap.appendChild(img);
-          wrap.appendChild(caption);
-          mapGallery.appendChild(wrap);
-        } else {
-          const wrap = document.createElement('div');
-          wrap.className = 'map-card';
-          wrap.textContent = f.name + ' (' + Math.round(f.size/1024) + ' KB)';
-          mapGallery.appendChild(wrap);
-        }
-      });
-    });
-  </script>
 </body>
+
 </html>

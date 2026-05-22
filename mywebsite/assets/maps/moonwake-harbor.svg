@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+  <title id="title">Moonwake Harbor DnD Battle Map</title>
+  <desc id="desc">A harbor battle map with docks, water, boats, crates, rooftops, and grid.</desc>
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0v50" fill="none" stroke="#d8f0f4" stroke-opacity=".22" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="700" fill="#1f6472"/>
+  <path d="M0 540c130-44 229-8 347-40 146-39 198-122 347-103 122 16 188 75 306 41v262H0Z" fill="#75634a"/>
+  <rect width="1000" height="700" fill="url(#grid)"/>
+  <g fill="none" stroke="#9bd1d9" stroke-opacity=".35" stroke-width="14">
+    <path d="M33 130c99 35 175 32 278-2 87-29 163-28 251 8 96 40 187 37 287 2"/>
+    <path d="M63 257c128 31 219 21 317-28 69-35 163-36 241-2 99 43 189 51 315 21"/>
+  </g>
+  <g fill="#6b4427" stroke="#3d2819" stroke-width="8">
+    <rect x="170" y="338" width="82" height="286"/>
+    <rect x="480" y="305" width="82" height="300"/>
+    <rect x="80" y="545" width="590" height="70"/>
+    <rect x="758" y="445" width="70" height="215"/>
+  </g>
+  <g fill="#8e6a42">
+    <rect x="94" y="560" width="54" height="30"/><rect x="208" y="560" width="54" height="30"/>
+    <rect x="322" y="560" width="54" height="30"/><rect x="436" y="560" width="54" height="30"/>
+    <rect x="550" y="560" width="54" height="30"/><rect x="775" y="470" width="30" height="54"/>
+  </g>
+  <g fill="#8b5f33" stroke="#49321e" stroke-width="5">
+    <rect x="626" y="516" width="52" height="42"/><rect x="690" y="535" width="48" height="42"/>
+    <rect x="310" y="608" width="48" height="42"/><rect x="120" y="492" width="54" height="40"/>
+  </g>
+  <g fill="#463828" stroke="#1e1a18" stroke-width="8">
+    <path d="M670 205c54-46 146-37 194 14-18 73-74 112-158 98-45-31-58-68-36-112Z"/>
+    <path d="M258 187c48-35 120-30 159 10-14 56-58 85-124 77-35-24-47-53-35-87Z"/>
+  </g>
+  <g fill="#d8c188">
+    <circle cx="708" cy="244" r="13"/><circle cx="810" cy="250" r="13"/><circle cx="312" cy="219" r="11"/>
+  </g>
+</svg>

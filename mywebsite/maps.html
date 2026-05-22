@@ -11,8 +11,7 @@
     <div class="logo">Dragonsteel Guild</div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
-      <a href="campaigns.html">Campaigns</a>
-      <a href="one-shots.html">One-Shots</a>
+      <a href="campaigns.html">Campaigns & One-Shots</a>
       <a href="vtt.html">VTT</a>
       <a href="dming.html">DMing</a>
     </nav>
@@ -25,11 +24,118 @@
           <h2>Master the battlefield with premium map design</h2>
         </div>
         <p>Dragonsteel Guild crafts immersive, high-resolution battle maps for every campaign, encounter, and event.</p>
+        <div class="custom-map-grid">
+          <button class="custom-map-card" type="button" data-map-src="assets/maps/whispering-thornwood.svg" data-map-title="Whispering Thornwood" data-map-description="An overgrown forest crossing with hidden ruins, tangled roots, and perfect ambush lanes.">
+            <img class="map-preview" src="assets/maps/whispering-thornwood.svg" alt="Whispering Thornwood battle map" />
+            <h3>Whispering Thornwood</h3>
+            <p>An overgrown forest crossing with hidden ruins, tangled roots, and perfect ambush lanes.</p>
+          </button>
+          <button class="custom-map-card" type="button" data-map-src="assets/maps/crypt-of-the-ashen-king.svg" data-map-title="Crypt of the Ashen King" data-map-description="A candlelit tomb chamber built for undead encounters, trapped corridors, and ritual finales.">
+            <img class="map-preview" src="assets/maps/crypt-of-the-ashen-king.svg" alt="Crypt of the Ashen King battle map" />
+            <h3>Crypt of the Ashen King</h3>
+            <p>A candlelit tomb chamber built for undead encounters, trapped corridors, and ritual finales.</p>
+          </button>
+          <button class="custom-map-card" type="button" data-map-src="assets/maps/moonwake-harbor.svg" data-map-title="Moonwake Harbor" data-map-description="A foggy dockside battleground with stacked crates, moored ships, and rooftop chase routes.">
+            <img class="map-preview" src="assets/maps/moonwake-harbor.svg" alt="Moonwake Harbor battle map" />
+            <h3>Moonwake Harbor</h3>
+            <p>A foggy dockside battleground with stacked crates, moored ships, and rooftop chase routes.</p>
+          </button>
+          <button class="custom-map-card" type="button" data-map-src="assets/maps/emberfall-forge.svg" data-map-title="Emberfall Forge" data-map-description="A volcanic smithy packed with molten channels, iron walkways, and dangerous elevation shifts.">
+            <img class="map-preview" src="assets/maps/emberfall-forge.svg" alt="Emberfall Forge battle map" />
+            <h3>Emberfall Forge</h3>
+            <p>A volcanic smithy packed with molten channels, iron walkways, and dangerous elevation shifts.</p>
+          </button>
+        </div>
+        <div class="upload-row single-upload">
+          <div class="upload-card">
+            <h4>Upload Your Maps</h4>
+            <p class="hint">Upload map images (PNG, JPG) or zipped map packs.</p>
+            <label class="file-input">
+              <input id="mapUpload" type="file" accept="image/*,.zip" multiple />
+              <span>Select map files</span>
+            </label>
+            <div id="mapGallery" class="map-gallery"></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <p>Dragonsteel Guild © 2026 · Crafted for epic businesses</p>
   </footer>
+  <div class="map-modal" id="mapModal" aria-hidden="true">
+    <div class="map-modal-panel" role="dialog" aria-modal="true" aria-labelledby="mapModalTitle">
+      <button class="map-modal-close" type="button" aria-label="Close map">&times;</button>
+      <img class="map-modal-preview" id="mapModalPreview" src="" alt="" />
+      <div class="map-modal-copy">
+        <h2 id="mapModalTitle"></h2>
+        <p id="mapModalDescription"></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const mapCards = document.querySelectorAll('.custom-map-card');
+    const mapModal = document.getElementById('mapModal');
+    const mapModalPreview = document.getElementById('mapModalPreview');
+    const mapModalTitle = document.getElementById('mapModalTitle');
+    const mapModalDescription = document.getElementById('mapModalDescription');
+    const mapModalClose = document.querySelector('.map-modal-close');
+
+    const closeMapModal = () => {
+      mapModal.classList.remove('is-open');
+      mapModal.setAttribute('aria-hidden', 'true');
+    };
+
+    mapCards.forEach(card => {
+      card.addEventListener('click', () => {
+        mapModalPreview.src = card.dataset.mapSrc;
+        mapModalPreview.alt = card.dataset.mapTitle + ' battle map';
+        mapModalTitle.textContent = card.dataset.mapTitle;
+        mapModalDescription.textContent = card.dataset.mapDescription;
+        mapModal.classList.add('is-open');
+        mapModal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    mapModalClose.addEventListener('click', closeMapModal);
+    mapModal.addEventListener('click', (e) => {
+      if (e.target === mapModal) closeMapModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMapModal();
+    });
+
+    const mapInput = document.getElementById('mapUpload');
+    const mapGallery = document.getElementById('mapGallery');
+
+    if (mapInput) mapInput.addEventListener('change', (e) => {
+      mapGallery.innerHTML = '';
+      Array.from(e.target.files).forEach(f => {
+        const ext = f.name.split('.').pop().toLowerCase();
+        if (['png', 'jpg', 'jpeg', 'webp', 'gif'].includes(ext)) {
+          const img = document.createElement('img');
+          img.src = URL.createObjectURL(f);
+          img.alt = f.name;
+          img.style.width = '100%';
+          img.style.borderRadius = '8px';
+          const wrap = document.createElement('div');
+          wrap.className = 'map-card';
+          const caption = document.createElement('div');
+          caption.textContent = f.name;
+          caption.style.fontSize = '0.85rem';
+          caption.style.color = 'var(--muted)';
+          caption.style.marginTop = '0.5rem';
+          wrap.appendChild(img);
+          wrap.appendChild(caption);
+          mapGallery.appendChild(wrap);
+        } else {
+          const wrap = document.createElement('div');
+          wrap.className = 'map-card';
+          wrap.textContent = f.name + ' (' + Math.round(f.size / 1024) + ' KB)';
+          mapGallery.appendChild(wrap);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
