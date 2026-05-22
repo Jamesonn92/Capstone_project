@@ -191,7 +191,7 @@ button, .btn {
 }
 
 /* Keep these classes for legacy usage, but make them subtle and not full-width */
-.section-dark,
+.section-dark, 
 .section-light {
   background: transparent;
 }
