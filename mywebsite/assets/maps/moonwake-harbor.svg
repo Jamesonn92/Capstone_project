@@ -1,38 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
-  <title id="title">Moonwake Harbor DnD Battle Map</title>
-  <desc id="desc">A harbor battle map with docks, water, boats, crates, rooftops, and grid.</desc>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="titleMoonwake">
+  <title id="titleMoonwake">Moonwake Harbor DnD Grid Map</title>
   <defs>
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M50 0H0v50" fill="none" stroke="#d8f0f4" stroke-opacity=".22" stroke-width="2"/>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L0 0 0 60" fill="none" stroke="#3f5364" stroke-width="1" />
     </pattern>
+    <linearGradient id="water" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#284b66" />
+      <stop offset="100%" stop-color="#1a3548" />
+    </linearGradient>
+    <linearGradient id="dock" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5d4a38" />
+      <stop offset="100%" stop-color="#3e2e20" />
+    </linearGradient>
   </defs>
-  <rect width="1000" height="700" fill="#1f6472"/>
-  <path d="M0 540c130-44 229-8 347-40 146-39 198-122 347-103 122 16 188 75 306 41v262H0Z" fill="#75634a"/>
-  <rect width="1000" height="700" fill="url(#grid)"/>
-  <g fill="none" stroke="#9bd1d9" stroke-opacity=".35" stroke-width="14">
-    <path d="M33 130c99 35 175 32 278-2 87-29 163-28 251 8 96 40 187 37 287 2"/>
-    <path d="M63 257c128 31 219 21 317-28 69-35 163-36 241-2 99 43 189 51 315 21"/>
+  <rect width="1200" height="900" fill="#172839" />
+  <rect width="1200" height="900" fill="url(#water)" opacity="0.95" />
+  <rect width="1200" height="900" fill="url(#grid)" opacity="0.25" />
+  <rect x="180" y="140" width="420" height="620" rx="16" fill="url(#dock)" />
+  <rect x="600" y="240" width="380" height="520" rx="16" fill="url(#dock)" />
+  <rect x="260" y="180" width="280" height="100" rx="12" fill="#4f3d2f" />
+  <rect x="610" y="260" width="220" height="90" rx="12" fill="#4f3d2f" />
+  <g fill="#3a5971" opacity="0.85">
+    <path d="M600 420 C660 410 740 430 800 390 L820 450 C760 470 680 460 600 430 Z" />
+    <path d="M500 720 C520 730 540 740 560 738 C580 736 600 728 620 720 C640 712 660 700 680 690 C700 680 720 672 740 668 C760 664 780 666 800 670 L820 680 Q780 700 760 710 Q720 725 700 730 Q660 735 620 734 Q580 733 540 726 Q510 720 500 720 Z" />
   </g>
-  <g fill="#6b4427" stroke="#3d2819" stroke-width="8">
-    <rect x="170" y="338" width="82" height="286"/>
-    <rect x="480" y="305" width="82" height="300"/>
-    <rect x="80" y="545" width="590" height="70"/>
-    <rect x="758" y="445" width="70" height="215"/>
-  </g>
-  <g fill="#8e6a42">
-    <rect x="94" y="560" width="54" height="30"/><rect x="208" y="560" width="54" height="30"/>
-    <rect x="322" y="560" width="54" height="30"/><rect x="436" y="560" width="54" height="30"/>
-    <rect x="550" y="560" width="54" height="30"/><rect x="775" y="470" width="30" height="54"/>
-  </g>
-  <g fill="#8b5f33" stroke="#49321e" stroke-width="5">
-    <rect x="626" y="516" width="52" height="42"/><rect x="690" y="535" width="48" height="42"/>
-    <rect x="310" y="608" width="48" height="42"/><rect x="120" y="492" width="54" height="40"/>
-  </g>
-  <g fill="#463828" stroke="#1e1a18" stroke-width="8">
-    <path d="M670 205c54-46 146-37 194 14-18 73-74 112-158 98-45-31-58-68-36-112Z"/>
-    <path d="M258 187c48-35 120-30 159 10-14 56-58 85-124 77-35-24-47-53-35-87Z"/>
-  </g>
-  <g fill="#d8c188">
-    <circle cx="708" cy="244" r="13"/><circle cx="810" cy="250" r="13"/><circle cx="312" cy="219" r="11"/>
-  </g>
+  <rect x="190" y="430" width="120" height="90" rx="10" fill="#8a6f4f" />
+  <rect x="430" y="580" width="110" height="80" rx="10" fill="#8a6f4f" />
+  <rect x="760" y="360" width="110" height="80" rx="10" fill="#8a6f4f" />
+  <rect x="930" y="440" width="110" height="80" rx="10" fill="#8a6f4f" />
+  <text x="600" y="870" fill="#c8d7e7" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Grid Scale: 5 ft per square</text>
 </svg>

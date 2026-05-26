@@ -1,37 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
-  <title id="title">Whispering Thornwood DnD Battle Map</title>
-  <desc id="desc">A forest battle map with paths, ruins, rocks, trees, and a square grid.</desc>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="titleWhispering">
+  <title id="titleWhispering">Whispering Thornwood DnD Grid Map</title>
   <defs>
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M50 0H0v50" fill="none" stroke="#f3edc7" stroke-opacity=".23" stroke-width="2"/>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L0 0 0 60" fill="none" stroke="#444" stroke-width="1" />
     </pattern>
-    <filter id="soft">
-      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#1b2b16" flood-opacity=".28"/>
-    </filter>
+    <linearGradient id="forest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a4d2b" />
+      <stop offset="100%" stop-color="#1d3a27" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8fb07f" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#234024" stop-opacity="0" />
+    </radialGradient>
   </defs>
-  <rect width="1000" height="700" fill="#314c2f"/>
-  <rect width="1000" height="700" fill="url(#grid)"/>
-  <path d="M-20 398C138 338 213 352 321 300c118-57 180-167 333-153 133 12 205 106 366 59v145c-120 26-196 8-300-12-120-23-186 2-287 83-139 111-258 90-453 133Z" fill="#8b784b" opacity=".9"/>
-  <path d="M-12 456c146-56 237-33 358-93 91-45 140-139 258-136 109 3 173 89 288 72 43-6 86-17 129-31" fill="none" stroke="#b6a066" stroke-width="44" stroke-linecap="round" opacity=".65"/>
-  <g fill="#22351e" filter="url(#soft)">
-    <circle cx="94" cy="92" r="58"/><circle cx="178" cy="146" r="42"/><circle cx="823" cy="107" r="61"/>
-    <circle cx="911" cy="177" r="48"/><circle cx="129" cy="603" r="62"/><circle cx="247" cy="572" r="43"/>
-    <circle cx="856" cy="582" r="70"/><circle cx="735" cy="607" r="45"/><circle cx="512" cy="80" r="46"/>
+  <rect width="1200" height="900" fill="#1c331f" />
+  <rect width="1200" height="900" fill="url(#forest)" opacity="0.9" />
+  <rect width="1200" height="900" fill="url(#grid)" opacity="0.35" />
+  <rect x="220" y="140" width="760" height="620" rx="20" fill="rgba(42, 86, 48, 0.35)" />
+  <circle cx="600" cy="320" r="120" fill="url(#glow)" />
+  <path d="M260 180 C310 140 430 120 520 180 S760 260 880 210" fill="none" stroke="#7a8c5f" stroke-width="18" stroke-linecap="round" />
+  <path d="M265 190 C315 240 345 310 305 370 S215 540 255 640" fill="none" stroke="#5a743f" stroke-width="22" stroke-linecap="round" />
+  <path d="M930 190 C880 240 840 310 880 370 S980 540 940 640" fill="none" stroke="#5a743f" stroke-width="22" stroke-linecap="round" />
+  <g fill="#334d2a" opacity="0.95">
+    <ellipse cx="190" cy="180" rx="48" ry="32" />
+    <ellipse cx="275" cy="240" rx="42" ry="30" />
+    <ellipse cx="345" cy="185" rx="35" ry="28" />
+    <ellipse cx="930" cy="220" rx="50" ry="35" />
+    <ellipse cx="980" cy="340" rx="55" ry="36" />
+    <ellipse cx="740" cy="680" rx="70" ry="45" />
   </g>
-  <g fill="#577442">
-    <circle cx="91" cy="88" r="38"/><circle cx="177" cy="143" r="27"/><circle cx="823" cy="105" r="39"/>
-    <circle cx="910" cy="174" r="31"/><circle cx="129" cy="600" r="42"/><circle cx="247" cy="570" r="28"/>
-    <circle cx="856" cy="580" r="46"/><circle cx="735" cy="605" r="29"/><circle cx="512" cy="78" r="29"/>
-  </g>
-  <g fill="#a7a49c" stroke="#5f5b50" stroke-width="5">
-    <rect x="584" y="298" width="158" height="34" rx="4" transform="rotate(-8 663 315)"/>
-    <rect x="594" y="363" width="112" height="30" rx="4" transform="rotate(12 650 378)"/>
-    <rect x="510" y="349" width="66" height="30" rx="4" transform="rotate(-19 543 364)"/>
-    <rect x="686" y="416" width="72" height="28" rx="4" transform="rotate(-21 722 430)"/>
-  </g>
-  <g fill="#4d514b" opacity=".85">
-    <ellipse cx="382" cy="518" rx="38" ry="24"/><ellipse cx="439" cy="492" rx="24" ry="18"/>
-    <ellipse cx="705" cy="236" rx="31" ry="19"/><ellipse cx="315" cy="208" rx="28" ry="20"/>
-  </g>
-  <path d="M452 295c-43 30-61 67-54 112 4 24 27 37 53 28 33-12 44-51 38-92" fill="none" stroke="#24381f" stroke-width="18" stroke-linecap="round"/>
+  <rect x="520" y="520" width="160" height="100" rx="18" fill="#5c4d29" />
+  <rect x="540" y="535" width="120" height="70" rx="12" fill="#3d2f1c" />
+  <circle cx="600" cy="560" r="28" fill="#8d7b4d" />
+  <text x="600" y="865" fill="#c3d7a7" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Grid Scale: 5 ft per square</text>
 </svg>

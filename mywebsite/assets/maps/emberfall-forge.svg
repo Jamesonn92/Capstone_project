@@ -1,44 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
-  <title id="title">Emberfall Forge DnD Battle Map</title>
-  <desc id="desc">A volcanic forge battle map with lava, platforms, bridges, anvils, and grid.</desc>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="titleEmberfall">
+  <title id="titleEmberfall">Emberfall Forge DnD Grid Map</title>
   <defs>
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M50 0H0v50" fill="none" stroke="#ffe1aa" stroke-opacity=".2" stroke-width="2"/>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L0 0 0 60" fill="none" stroke="#4b3b2d" stroke-width="1" />
     </pattern>
-    <radialGradient id="lava" cx="50%" cy="50%" r="70%">
-      <stop offset="0" stop-color="#ffd36b"/>
-      <stop offset=".46" stop-color="#f36b28"/>
-      <stop offset="1" stop-color="#7b1d17"/>
-    </radialGradient>
+    <linearGradient id="lava" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c65318" />
+      <stop offset="100%" stop-color="#8a1e1f" />
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5a4d42" />
+      <stop offset="100%" stop-color="#3b3127" />
+    </linearGradient>
   </defs>
-  <rect width="1000" height="700" fill="#2d2630"/>
-  <path d="M0 120c138 31 220 97 331 73 113-24 160-116 291-98 145 20 200 128 378 91v514H0Z" fill="url(#lava)"/>
-  <rect width="1000" height="700" fill="url(#grid)"/>
-  <g fill="#3e3a3d" stroke="#17151a" stroke-width="16">
-    <path d="M94 171h289l64 78-42 123H124Z"/>
-    <path d="M578 222h282l55 90-50 128H599Z"/>
-    <path d="M265 465h450l55 75-44 86H306Z"/>
-  </g>
-  <g fill="#5b5554">
-    <rect x="172" y="232" width="168" height="78" rx="8"/>
-    <rect x="660" y="285" width="130" height="84" rx="8"/>
-    <rect x="428" y="520" width="160" height="58" rx="8"/>
-  </g>
-  <g stroke="#9b7b4a" stroke-width="32" stroke-linecap="round">
-    <path d="M389 319l223 14"/>
-    <path d="M516 426l-20 88"/>
-    <path d="M326 464l-62-112"/>
-  </g>
-  <g fill="#2b2930" stroke="#c28b39" stroke-width="7">
-    <path d="M244 242h76v42h-76Z"/>
-    <path d="M700 298h68v54h-68Z"/>
-    <path d="M504 530h76v38h-76Z"/>
-  </g>
-  <g fill="#f0b04b">
-    <circle cx="128" cy="500" r="19"/><circle cx="832" cy="567" r="24"/>
-    <circle cx="506" cy="166" r="22"/><circle cx="924" cy="102" r="18"/>
-  </g>
-  <g fill="none" stroke="#ffcf75" stroke-opacity=".55" stroke-width="10">
-    <path d="M35 286c82 35 146 31 211-13M713 131c69 48 147 53 232 13M89 637c155-42 268-30 382 19"/>
-  </g>
+  <rect width="1200" height="900" fill="#261a14" />
+  <rect width="1200" height="900" fill="url(#metal)" opacity="0.95" />
+  <rect width="1200" height="900" fill="url(#grid)" opacity="0.28" />
+  <rect x="200" y="140" width="380" height="620" rx="16" fill="#3c2f25" />
+  <rect x="620" y="160" width="340" height="640" rx="16" fill="#3c2f25" />
+  <rect x="420" y="320" width="160" height="260" rx="20" fill="url(#lava)" />
+  <path d="M620 210 L760 210 L780 280 L740 300 L620 300 Z" fill="#50413a" />
+  <rect x="240" y="220" width="120" height="90" rx="12" fill="#66513f" />
+  <rect x="260" y="520" width="150" height="110" rx="12" fill="#66513f" />
+  <circle cx="720" cy="380" r="34" fill="#a94a15" />
+  <rect x="680" y="520" width="160" height="90" rx="12" fill="#66513f" />
+  <rect x="780" y="500" width="80" height="180" rx="12" fill="rgba(255, 104, 16, 0.55)" />
+  <text x="600" y="870" fill="#d3b090" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Grid Scale: 5 ft per square</text>
 </svg>

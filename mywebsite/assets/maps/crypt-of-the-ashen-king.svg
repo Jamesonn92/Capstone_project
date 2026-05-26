@@ -1,40 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
-  <title id="title">Crypt of the Ashen King DnD Battle Map</title>
-  <desc id="desc">A stone crypt battle map with chambers, coffins, braziers, corridors, and grid.</desc>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="titleCrypt">
+  <title id="titleCrypt">Crypt of the Ashen King DnD Grid Map</title>
   <defs>
-    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
-      <path d="M50 0H0v50" fill="none" stroke="#d8d0ad" stroke-opacity=".2" stroke-width="2"/>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L0 0 0 60" fill="none" stroke="#4b4b4b" stroke-width="1" />
     </pattern>
+    <linearGradient id="stone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#666" />
+      <stop offset="100%" stop-color="#3f3f3f" />
+    </linearGradient>
   </defs>
-  <rect width="1000" height="700" fill="#252534"/>
-  <rect width="1000" height="700" fill="url(#grid)"/>
-  <g fill="#77727a" stroke="#171722" stroke-width="18">
-    <rect x="105" y="115" width="790" height="470" rx="14"/>
-    <rect x="395" y="45" width="210" height="130" rx="8"/>
-    <rect x="395" y="525" width="210" height="130" rx="8"/>
-  </g>
-  <g fill="#4a4853">
-    <rect x="145" y="155" width="710" height="390" rx="8"/>
-    <rect x="430" y="80" width="140" height="95"/>
-    <rect x="430" y="525" width="140" height="95"/>
-  </g>
-  <g fill="#86818a" stroke="#3a3742" stroke-width="8">
-    <rect x="435" y="250" width="130" height="170" rx="8"/>
-    <rect x="197" y="204" width="82" height="132" rx="10"/>
-    <rect x="721" y="204" width="82" height="132" rx="10"/>
-    <rect x="197" y="376" width="82" height="132" rx="10"/>
-    <rect x="721" y="376" width="82" height="132" rx="10"/>
-  </g>
-  <path d="M500 275l44 51-18 70h-52l-18-70Z" fill="#9f9472" stroke="#5c523d" stroke-width="8"/>
-  <g fill="#e39d32">
-    <circle cx="332" cy="220" r="18"/><circle cx="668" cy="220" r="18"/>
-    <circle cx="332" cy="480" r="18"/><circle cx="668" cy="480" r="18"/>
-  </g>
-  <g fill="none" stroke="#c8c0a8" stroke-opacity=".35" stroke-width="7">
-    <path d="M162 350h230M608 350h230M500 176v68M500 456v68"/>
-  </g>
-  <g fill="#242330" opacity=".75">
-    <rect x="145" y="155" width="40" height="390"/><rect x="815" y="155" width="40" height="390"/>
-    <rect x="145" y="155" width="710" height="40"/><rect x="145" y="505" width="710" height="40"/>
-  </g>
+  <rect width="1200" height="900" fill="#222228" />
+  <rect width="1200" height="900" fill="url(#stone)" opacity="0.95" />
+  <rect width="1200" height="900" fill="url(#grid)" opacity="0.3" />
+  <rect x="180" y="120" width="840" height="660" rx="12" fill="#303038" stroke="#8c8c8c" stroke-width="2" />
+  <rect x="250" y="220" width="700" height="420" fill="#27272f" />
+  <path d="M250 340 H950" stroke="#5f5f6f" stroke-width="18" />
+  <path d="M250 520 H950" stroke="#5f5f6f" stroke-width="18" />
+  <path d="M400 220 V640" stroke="#5f5f6f" stroke-width="18" />
+  <path d="M700 220 V640" stroke="#5f5f6f" stroke-width="18" />
+  <rect x="520" y="420" width="160" height="100" rx="10" fill="#4a3b32" stroke="#72625e" stroke-width="6" />
+  <line x1="520" y1="450" x2="680" y2="450" stroke="#5f4f44" stroke-width="8" />
+  <circle cx="600" cy="490" r="24" fill="#a3876a" />
+  <rect x="310" y="600" width="120" height="90" rx="8" fill="#46454f" />
+  <rect x="770" y="600" width="120" height="90" rx="8" fill="#46454f" />
+  <text x="600" y="870" fill="#c7c7d1" font-family="Arial, sans-serif" font-size="28" text-anchor="middle">Grid Scale: 5 ft per square</text>
 </svg>
